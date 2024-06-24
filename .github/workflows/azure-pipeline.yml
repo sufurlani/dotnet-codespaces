@@ -20,8 +20,10 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-    - name: Restore dependencies
-      run: dotnet restore
+    - name: Restore dependencies on backend
+      run: dotnet restore /workspaces/dotnet-codespaces/SampleApp/BackEnd
+    - name: Restore dependencies on frontend
+      run: dotnet restore /workspaces/dotnet-codespaces/SampleApp/FrontEnd
     - name: Build
       run: dotnet build --no-restore
 
