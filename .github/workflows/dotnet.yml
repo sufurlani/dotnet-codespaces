@@ -23,4 +23,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore SampleApp/SampleApp.sln
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build SampleApp/SampleApp.sln --no-restore
